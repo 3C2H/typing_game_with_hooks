@@ -1,6 +1,13 @@
 # typing_game_with_hooks
 A speed typing game using React Hooks
 
+# README file contains steps to build the app
+
+  1_/° build the basic structure of the game
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
