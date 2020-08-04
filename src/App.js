@@ -5,6 +5,8 @@ import "./App.css"
 function App() {
   const [text, setText] = useState('')
   const [timeRemaining, setTimeRemaining] = useState(5)
+  const [isTimeRunning, setIsTimeRunning] = useState(false)
+
   
   function handleChange(event) {
     const {value} = event.target
@@ -17,12 +19,14 @@ function App() {
   }
 
   useEffect(() => {
-    if(timeRemaining > 0) {
+    if(isTimeRunning && timeRemaining > 0) {
       setTimeout(() => {
         setTimeRemaining(time => time - 1)
       }, 1000)
+    }else if(timeRemaining === 0) {
+      setIsTimeRunning(false)
     }
-  }, [timeRemaining])
+  }, [timeRemaining, isTimeRunning])
 
   return (
     <div>
@@ -32,7 +36,7 @@ function App() {
             value={text}
         />
         <h4>Time reminaing: {timeRemaining} </h4>
-        <button>Start</button>
+        <button onClick={() => setIsTimeRunning(true)}>Start</button>
         <h1>Word count: ???</h1>
     </div>
   )

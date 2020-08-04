@@ -14,6 +14,8 @@ A speed typing game using React Hooks
 
   5_/°  Set up an effect that runs every time the `timeRemaining` changes
 
+  6_/°  Start the timer when clicking the "START" button
+
 
 
 
