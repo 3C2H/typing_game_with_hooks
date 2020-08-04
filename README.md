@@ -3,9 +3,12 @@ A speed typing game using React Hooks
 
 # README file contains steps to build the app
 
-  1_/° Bild the basic structure of the game
-  
-  2_/° Using hooks, track the state of the text in the textarea
+  1_/°  Build the basic structure of the game
+
+  2_/°  Using hooks, track the state of the text in the textarea
+
+  3_/°  Create a function to calculate the number of words in the `text` state
+
 
 
 

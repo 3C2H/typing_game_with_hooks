@@ -9,7 +9,12 @@ function App() {
     const {value} = event.target
     setText(value)    
   }
-  
+
+  function wordsCount(text) {
+    let wordsArr = text.trim().split(" ")
+    let filteredWordArr = wordsArr.filter(word => word !=="")
+  }
+
   return (
     <div>
         <h1>How fast do you type?</h1>
