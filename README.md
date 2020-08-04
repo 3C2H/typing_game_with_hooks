@@ -20,6 +20,12 @@ A speed typing game using React Hooks
 
   8_/°  After game ends, the user can click start button to play again
 
+  9_/°  Prevent bug & cheating by disabling textarea & button
+
+  10_/° Focus the inputbox on gamestart
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
