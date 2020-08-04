@@ -3,9 +3,11 @@ import "./App.css"
 
 
 function App() {
-  const [text, setText] = useState('')
-  const [timeRemaining, setTimeRemaining] = useState(5)
+  const STARTING_TIME = 5    
+  const [text, setText] = useState("")
+  const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
   const [isTimeRunning, setIsTimeRunning] = useState(false)
+  const [wordCount, setWordCount] = useState(0)
 
   
   function handleChange(event) {
@@ -13,9 +15,20 @@ function App() {
     setText(value)    
   }
 
-  function wordsCount(text) {
+  function calculateWordCount(text) {
     let wordsArr = text.trim().split(" ")
-    let filteredWordArr = wordsArr.filter(word => word !=="")
+    return wordsArr.filter(word => word !== "").length
+  }
+
+  function startGame() {
+    setIsTimeRunning(true)
+    setTimeRemaining(STARTING_TIME)
+    setText("")
+  }
+
+  function endGame() {
+      setIsTimeRunning(false)
+      setWordCount(calculateWordCount(text))
   }
 
   useEffect(() => {
@@ -24,7 +37,7 @@ function App() {
         setTimeRemaining(time => time - 1)
       }, 1000)
     }else if(timeRemaining === 0) {
-      setIsTimeRunning(false)
+      endGame()
     }
   }, [timeRemaining, isTimeRunning])
 
@@ -34,10 +47,16 @@ function App() {
         <textarea
             onChange={handleChange}
             value={text}
+            disabled={!isTimeRunning}
         />
         <h4>Time reminaing: {timeRemaining} </h4>
-        <button onClick={() => setIsTimeRunning(true)}>Start</button>
-        <h1>Word count: ???</h1>
+        <button
+          onClick={startGame}
+          disabled={isTimeRunning}
+        >
+          Start
+        </button>
+        <h1>Word count: {wordCount} </h1>
     </div>
   )
 }

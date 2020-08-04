@@ -16,7 +16,9 @@ A speed typing game using React Hooks
 
   6_/°  Start the timer when clicking the "START" button
 
+  7_/°  When timer reaches 0, count and display number of words
 
+  8_/°  After game ends, the user can click start button to play again
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
