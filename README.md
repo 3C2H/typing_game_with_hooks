@@ -3,7 +3,10 @@ A speed typing game using React Hooks
 
 # README file contains steps to build the app
 
-  1_/° build the basic structure of the game
+  1_/° Bild the basic structure of the game
+  
+  2_/° Using hooks, track the state of the text in the textarea
+
 
 
 
