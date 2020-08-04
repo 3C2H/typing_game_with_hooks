@@ -9,7 +9,10 @@ A speed typing game using React Hooks
 
   3_/°  Create a function to calculate the number of words in the `text` state
 
+  4_/°  Create state to hold the current value of the countdown timer.
+        Display this time in the "Time Remaining" header
 
+  5_/°  Set up an effect that runs every time the `timeRemaining` changes
 
 
 
