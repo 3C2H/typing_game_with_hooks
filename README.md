@@ -24,6 +24,8 @@ A speed typing game using React Hooks
 
   10_/° Focus the inputbox on gamestart
 
+  11_/° Move the "business logic" into a custom hook
+
 
 
 
