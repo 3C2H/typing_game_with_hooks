@@ -1,10 +1,9 @@
 import {useState, useEffect, useRef} from 'react'
 
-function useLogic() {
+function useWordGame(startingTime) {
 
-  const STARTING_TIME = 5    
   const [text, setText] = useState("")
-  const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
+  const [timeRemaining, setTimeRemaining] = useState(startingTime)
   const [isTimeRunning, setIsTimeRunning] = useState(false)
   const [wordCount, setWordCount] = useState(0)
   const textBoxRef = useRef(null)
@@ -22,7 +21,7 @@ function useLogic() {
 
   function startGame() {
     setIsTimeRunning(true)
-    setTimeRemaining(STARTING_TIME)
+    setTimeRemaining(startingTime)
     setText("")
     textBoxRef.current.disabled = false
     textBoxRef.current.focus()
@@ -48,4 +47,4 @@ function useLogic() {
   )
 }
 
-export default useLogic
+export default useWordGame

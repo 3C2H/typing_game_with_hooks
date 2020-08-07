@@ -1,10 +1,19 @@
 import React from "react"
-import useLogic from "./useLogic"
+import useWordGame from "./useWordGame"
 import "./App.css"
 
 
 function App() {
-  const {textBoxRef, handleChange, text, isTimeRunning, timeRemaining, startGame, wordCount} = useLogic()
+  const {
+    textBoxRef,
+    handleChange,
+    text,
+    isTimeRunning,
+    timeRemaining,
+    startGame,
+    wordCount
+  } = useWordGame(10)
+  // "useWordGame" parameter is the timer for the game
 
   return (
     <div>
